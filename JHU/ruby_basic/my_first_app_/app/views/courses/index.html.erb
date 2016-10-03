@@ -1,0 +1,23 @@
+<h1>Searching for - <%= @search_term %></h1>
+
+<% if @courses.nil? %>
+
+<p>No courses with "<%= @search_term %>" were found</p>
+
+<% else %>
+
+<table border="1">
+  <tr>
+    <th>Image</th>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <% @courses.each do |course| %>
+  <tr class=<%= cycle('even', 'ood') %>>
+    <td><%= image_tag(course["smallIcon"]) %></td>
+    <td><%= course["name"] %></td>
+    <td><%= course["shortDescription"] %></td>
+  </tr>
+  <% end %>
+</table>
+<% end %>
