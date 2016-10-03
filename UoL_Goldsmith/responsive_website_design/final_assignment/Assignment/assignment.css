@@ -1,0 +1,148 @@
+/* put your css code here */
+.navbar {
+    margin-bottom: 0px;
+}
+
+.navbar-default {
+    border: none;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-radius: 0px;
+}
+
+.breadcrumb a:hover {
+    text-decoration: none;
+}
+
+.breadcrumb {
+    border-radius: 0px;
+    background: #EEE;
+    margin-bottom: 0px;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+.container .jumbotron {
+    border-radius: 0px;
+    height: 50%;
+    padding: 5px;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    margin-bottom: 0px;
+    position: relative;
+}
+
+.jumbotron #content {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.jumbotron #content img {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 500;
+}
+
+.jumbotron #content .species {
+    position: absolute;
+    bottom: 0px;
+    z-index: 1000;
+    color: #FFF;
+    width: 100%;
+    height: 200px;
+    line-height: 50px;
+    padding-left: 50px;
+    display: none;
+    font-size: 100px;
+    text-shadow: 3px 3px 1px #666;
+}
+
+footer {
+    height: 100px;
+    background: #CCC;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    line-height: 100px;
+    text-align: center;
+}
+
+
+.thumbnail_outer {
+    padding: 25px;
+}
+
+.thumbnails {
+    padding: 5px;
+}
+
+.thumbnails {
+    min-height: 300px;
+    border: 1px solid #000;
+}
+
+.thumbnails a:hover {
+    text-decoration: none;
+}
+
+.thumbnails:hover {
+    background: #FFF;
+} 
+
+.thumbnails a img {
+    width: 100%;
+    min-height: 250px; 
+}
+
+#content {
+    background: #EEE;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    text-align: center;
+    min-height: 50%;
+}
+
+h3 {
+    margin: 0px;
+}
+
+p {
+    margin-bottom: 0px;
+}
+
+.thumbnails_inner {
+    padding: 5px;
+}
+
+.single_animal {
+    border: 1px solid #000;
+    float: left;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.single_animal:hover {
+    background: #FFF;
+}
+
+.thumbnails_inner img {
+    width: 100%;
+    display: none;
+}
+
+.thumbnails_inner .show_pic {
+    display: block;
+}
+
+.jumbotron #content {
+    border: none;
+}
+
+.navbar-header {
+    height: ;
+}

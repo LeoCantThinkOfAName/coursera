@@ -1,0 +1,34 @@
+真值表：
+    NOT                     true?   V
+    not false               true    V   
+    not true                false   V
+    OR                      true?   V
+    true or false           true    V
+    true or true            true    V
+    false or true           true    V
+    false or false          false   V
+    AND                     true?   V
+    true and false          false   V
+    true and true           true    V
+    false and true          false   V
+    false and false         false   V
+    NOT OR                  true?   #   
+    not(true or false)      false   V
+    not(true or true)       false   V
+    not(false or true)      false   V
+    not(false or false)     true    V
+    NOT AND                 true?   V 
+    not(true and false)     true    V
+    not(true and true)      false   V
+    not(false and true)     true    V
+    not(false and false)    true    V
+    !=                      true?   #
+    1 != 0                  true    V
+    1 != 1                  false   V
+    0 != 1                  true    V
+    0 != 0                  false   V
+    ==                      true?   V
+    1 == 0                  false   V
+    1 == 1                  true    V
+    0 == 1                  false   V
+    0 == 0                  true    V

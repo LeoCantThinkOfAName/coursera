@@ -1,0 +1,87 @@
+alias = name a function with different name and can keep the origin function's settings.
+and = boolean expression.
+BEGIN = 
+begin = 
+break = to stop a loop or a function.
+case = a statement like switch-case in javascript.
+class = a collection like module.
+def = a function.
+defined? = a boolean expression that check a variable or CONSTANT is defined or not.
+do = a expression to execute something under a specific situation.
+else = if/else statement.
+elsif = multiple if/else statement.
+END =
+end = a term to close a statement.
+ensure = a way to ensure some code block woll be execute.
+false = boolean expression.
+for = for/in loop statement.
+if = if/else statement.
+in = for/in loop statement.
+module = a collection of function.
+next = return the next integer.
+nil = null/false.
+not = to make true to false, and vice versa.
+or = a expression.
+redo = a method in loop function.
+rescue = 
+retry = 
+self = set the receiver to the it self?
+super = point to the parent.
+then =
+true = boolean expression.
+undef = to make a function undefined.
+unless = another expression meaning not execute.
+until = do sth. until some other thing occured.
+when = do sth. when some other thing triggered.
+while = loop like forever.
+yield = to take a place.
+
+true = boolean expression.
+false = boolen expression.
+nil = false/null.
+constants = a variable that should not be change.
+string = a bunch of letters and words stuff.
+numbers = numbers.
+ranges = a setted range of numbers.
+arrays = a collection of stuffs.
+hashes = a relatived collection of stuffs.
+
+\\ = to make a backslash in string.
+\' = to make a quote in string.
+\" = to make a double quote in string.
+\a = 
+\b = to delete last letter.
+\f = to make a single space.
+\n = to make a new line.
+\r = to cut of the rest content in that line.
+\t = to make a indent.
+\v = to make a strange symbol...
+
+:: = 
+[] = a container to contain arrays.
+** = to square.
+- = to substract.
++ = to plus.
+! = not.
+~ = 
+* = to multiply.
+/ = to devide.
+% = return the leftover number of devided.
+<< = inherit.
+>> =
+& = and.
+| = or.
+> = larger than.
+>= = larger or equal.
+< = smaller than.
+<= = samller or equal.
+<=> =
+== = equal to.
+=== = 
+!= = not equal to.
+=~ =
+!~ =
+&& = 
+|| = 
+.. = a range.
+... = a range exclude the last number.

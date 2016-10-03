@@ -1,0 +1,122 @@
+/*************** GENERAL SETTING ***************/
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: Courier New, Courier, monospace;
+    color: #FFF;
+    font-size: 20px;
+    line-height: 2em;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background: url("../images/WP_20150510_03_10_55_Pro.jpg") center no-repeat fixed burlywood;
+    background-size: cover;
+    background-blend-mode: luminosity;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+i {
+    color: red;
+}
+/*************** GENERAL END ***************/
+
+/*************** HEADER SETTING ***************/
+header h1 {
+    margin: 5% auto;
+    font-size: 80px;
+    line-height: 50px;
+    text-shadow: 2px 2px 1px #000;
+}
+/*************** HEADER END ***************/
+
+/*************** MAIN AREA SETTING ***************/
+.main {
+    position: relative;
+    margin: 0 auto;
+    border: 1px solid #FFF;
+    width: 90%;
+    background: rgba(0,0,0,0.5);
+}
+
+#backward, #forward {
+    position: absolute;
+    height: 100%;
+    width: 30px;
+    background: #000;
+    transition: 1s;
+    cursor: pointer;
+}
+
+#forward {
+    right: 0;
+}
+
+#backward:hover, #forward:hover {
+    background: #FFF;
+    transition: 1s;
+}
+
+#backward:hover>p, #forward:hover>p {
+    color: #000;
+    transition: 1s;
+}
+
+#backward>p, #forward>p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#content {
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/*************** MAIN AREA END ***************/
+
+/*************** FOOTER SETTING ***************/
+footer {
+    position: absolute;
+    bottom: -200px;
+    height: 150px;
+    width: 100%;
+    background: #000;
+}
+
+footer p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 15px;
+    font-size: 10px;
+}
+
+footer img {
+    position: absolute;
+    top: 25px;
+    margin: 0 auto;
+    margin-left: -50px;
+    height: 100px;
+    border-radius: 50%;
+}
+/*************** FOOTER END ***************/
