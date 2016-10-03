@@ -1,1 +1,0 @@
-puts "I luv Candy!" # This is a comment
