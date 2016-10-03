@@ -1,0 +1,159 @@
+// Place all the styles related to the recipes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.search_title {
+    text-align: center;
+    background: #000;
+    font-size: 15px;
+    color: #FFF;
+    position: relative;
+    z-index: 100;
+}
+
+.search_title em {
+    font-style: normal;
+    font-size: 30px;
+}
+
+.search_error {
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    padding: 10px;
+    float: left;
+    background: #802c4a;
+}
+
+.container .course_wrapper {
+    float: left;
+    padding: 10px;
+    height: 350px;
+}
+
+@media screen and (min-width: 1200px) {
+    .container .course_wrapper {
+        width: 25%;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1199px) {
+    .container .course_wrapper {
+        width: 33.33%;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 799px) {
+    .container .course_wrapper {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .container .course_wrapper {
+        width: 100%;
+    }
+}
+
+.container .course_wrapper .course_temp {
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    background: ivory;
+    position: relative;
+}
+
+.container .course_wrapper .course_cover {
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    padding-right: 20px;
+}
+
+.container .course_wrapper .course_cover a {
+    display: block;
+    height: 250px;
+    padding-top: 100px;
+    text-align: center;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 25px;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: 1s;
+}
+
+.container .course_wrapper .course_cover a:hover {
+    opacity: 1;
+    transition: 1s;
+}
+
+.container .course_wrapper .course_img img {
+    width: 100%;
+    height: 250px;
+}
+
+.container .course_wrapper .course_title {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.container .course_wrapper .course_title a{
+    text-decoration: none;
+    color: #000;
+}
+
+.container .course_wrapper .course_rank {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #d86b6b;
+}
+
+.search_error {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.search_error h2 {
+    background: #FFF;
+}
+
+.search_error a {
+    color: #d86b6b;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.error_msg {
+    position: fixed;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
+    background: rgba(255,255,255,0.9);
+    border: 1px solid #999;
+    text-align: center;
+    line-height: 30px;
+    padding: 10px;
+}
+
+.error_wrapper {
+    position: relative;
+}
+
+.error_btn {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    height: 20px;
+    width: 20px;
+    color: #000;
+    font-family: sans-serif;
+    cursor: pointer;
+}

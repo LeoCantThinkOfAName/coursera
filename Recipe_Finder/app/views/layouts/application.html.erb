@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecipeFinder</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+
+    <script>
+        function getJSON(url) {
+            var resp ;
+            var xmlHttp ;
+
+            resp  = '' ;
+            xmlHttp = new XMLHttpRequest();
+
+            if(xmlHttp != null)
+            {
+                xmlHttp.open( "GET", url, false );
+                xmlHttp.send( null );
+                resp = xmlHttp.responseText;
+            }
+
+            return resp ;
+        }
+        window.onload = function() {
+            var goTop = document.querySelector('#goTop');
+
+            goTop.onclick = function() {
+                document.documentElement.scrollTop = document.body.scrollTop = 0;
+            }
+            setInterval(function() {
+                var header = document.querySelector('.bg');
+                var jsonData = getJSON('https://crossorigin.me/http://food2fork.com/api/search?key=6a2fffabc59d4f1efe291db03da0bbda');
+                var objs = JSON.parse(jsonData);
+                var recipes = objs.recipes;
+                var img = recipes[Math.round(Math.random() * 30)].image_url;
+
+                header.style.background = "url(" + img + ")";
+                header.style.backgroundSize = "cover";
+            }, 1000 * 15);
+
+        }
+
+        window.onscroll = function() {
+            var cH = document.documentElement.scrollTop || document.body.scrollTop;
+            var search_title = document.querySelector('.search_title');
+            var goTop = document.querySelector('#goTop');
+
+            if(cH >= 400) {
+                search_title.style.position = "fixed";
+                search_title.style.width = "100%";
+                search_title.style.top = "0px";
+                goTop.style.display = "block";
+            } else {
+                search_title.style.position = "relative";
+                search_title.style.width = "100%";
+                goTop.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header id="header">
+        <div class="bg"></div>
+        <h1><span id="h1_left"></span>Food&nbsp;<i>4</i>&nbsp;Love<span id="h1_right"></span></h1>
+        <h2>Recipe Finder</h2>
+        <br>
+        <%= form_tag('',:method => "get", id: "search-form", html: {autocomplete: 'off'}) do %>
+            <%= text_field_tag :search, params[:search], placeholder: "Chocolate, Strawberry...", id: "search_input" %>
+            <%= submit_tag ("&telrec;").html_safe, :name => nil, id: "search_btn" %>
+        <% end %>
+    </header>
+
+    <div id="goTop">Top</div>
+
+<%= yield %>
+
+    <footer>
+        <p>Powered By Food2Fork.com</p>
+        <p>2016&copy;Leo, Lin</p>
+    </footer>
+
+</body>
+</html>
