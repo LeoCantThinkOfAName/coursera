@@ -1,0 +1,145 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    height: 400px;
+    text-align: center;
+    padding-top: 140px;
+    color: #FFF;
+    position: relative;
+    background: rgba(0,0,0,0.3);
+}
+
+header .bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("/assets/recipe_bg.png");
+    background-size: cover;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+header h1 {
+    font-size: 50px;
+    line-height: 60px;
+    display: inline-block;
+    position: relative;
+    width: 300px;
+    height: 65px;
+    border-top: 1px solid #FFF;
+    border-left: 1px solid #FFF;
+    border-right: 1px solid #FFF;
+}
+
+header h1 #h1_left {
+    position: absolute;
+    left: 0;
+    width: 70px;
+    height: 64px;
+    border-bottom: 1px solid #FFF;
+}
+
+header h1 #h1_right {
+    position: absolute;
+    right: 0;
+    width: 70px;
+    height: 64px;
+    border-bottom: 1px solid #FFF;
+}
+
+header h1 i {
+    font-style: none;
+    font-size: 70px;
+    padding: 10px;
+    display: inline-block;
+    transform: rotate(25deg);
+    position: absolute;
+    left: 125px;
+    top: -10px;
+    color: #d86b6b;
+    z-index: 0;
+}
+
+header h2 {
+    margin-top: -15px;
+}
+
+header form {
+    background: #FFF;
+    width: 300px;
+    height: 25px;
+    margin: 0 auto;
+}
+
+header form #search_input {
+    border: none;
+    line-height: 25px;
+    font-size: 15px;
+    width: 90%;
+    float: left;
+    padding: 0px 5px;
+    outline-color: powderblue;
+}
+
+header form #search_btn {
+    border: none;
+    line-height: 20px;
+    width: 10%;
+    background: none;
+    float: left;
+    font-size: 30px;
+    outline: none;
+    color: #AAA;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    padding: 30px;
+    background: #000;
+    color: #FFF;
+    float: left;
+    text-align: center;
+}
+
+#goTop {
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    right: 50px;
+    bottom: 50px;
+    z-index: 1000;
+    background: #d86b6b;
+    color: #FFF;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.8;
+    display: none;
+}
+
+#goTop:hover {
+    opacity: 1;
+}

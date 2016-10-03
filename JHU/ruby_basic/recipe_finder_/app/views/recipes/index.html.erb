@@ -1,0 +1,62 @@
+<h2 class="search_title">All the recipes for...<br><em>&ldquo; <%= (@search_term).capitalize %> &rdquo;</em></h2>
+
+<% if (@recipes.nil? or @recipes == []) %>
+<div class="container">
+    <div class="search_error">
+        <h2>
+        Why not try some "<% arr = ['Candies', 'Chocolates', 'Cookies', 'Jellies', 'Hamburgers', 'Sandwiches', 'Salads', 'Cakes', 'Pastas', 'Pizzas', 'Soups', 'Currys'] %><% food = arr[rand(arr.length())] %><%= link_to(food, search: food) %>"?
+        </h2>
+    </div>
+</div>
+
+<div class="error_msg">
+    <div class="error_wrapper">
+        <span class="error_btn" onclick="close_msg()">X</span>
+        <h2>OOPs!</h2>
+        <p>Sorry, I can't find any <span><%= @search_term %></span>'s recipe!</p>
+        <p>Or maybe our database is temporary unavailable...</p>
+        <p>You may need to change your search term,</p>
+        <p>or try again later!</p>
+    </div>
+</div>
+
+<script>
+    function close_msg() {
+        var error_msg = document.querySelector('.error_msg');
+
+        error_msg.style.display = "none";
+    }
+</script>
+
+<% else %>
+
+<div class="container">
+    
+    <% @recipes.each do |course| %>
+    <div class="course_wrapper">
+        <div class="course_temp">
+            <div class="course_cover"><%= link_to(("See how it's done on <br>").html_safe + course["publisher"] + "!" ,course["source_url"], target: "_blank") %></div>
+            <div class="course_img"><%= image_tag(course["image_url"]) %></div>
+            <div class="course_title"><%= link_to(course["title"].html_safe, course["source_url"]) %></div>
+            <div class="course_rank">
+            <% courserank =  course["social_rank"].round %>
+            <% if courserank >= 80 %>
+                <p title="Rating: 5&starf;">&starf;&starf;&starf;&starf;&starf;</p>
+            <% elsif courserank >= 60 %>
+                <p title="Rating: 4&starf;">&starf;&starf;&starf;&starf;</p>
+            <% elsif courserank >= 40 %>
+                <p title="Rating: 3&starf;">&starf;&starf;&starf;</p>
+            <% elsif courserank >= 20 %>
+                <p title="Rating: 2&starf;">&starf;&starf;</p>
+            <% elsif courserank < 20 %>
+                <p title="Rating: 1&starf;">&starf;</p>
+            <% end %>
+            </div>
+        </div>
+    </div>
+
+    <% end %>
+
+</div>
+
+<% end %>
